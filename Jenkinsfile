@@ -3,8 +3,8 @@ pipeline {
         label 'linux'
     }
     environment {
-        // IMAGE_NAME = "calcwebappmvn:${BUILD_NUMBER}"
-        // my_aws_access = credentials('my-aws-cred')
+        IMAGE_NAME = "calcwebappmvn:${BUILD_NUMBER}"
+         my_aws_access = credentials('my-aws-cred')
     }
     tools {
         maven 'my-mvn'
