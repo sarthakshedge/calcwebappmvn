@@ -1,14 +1,14 @@
 pipeline {
     agent {
-        label 'linux'
+        label 'ag-1'
     }
     environment {
         IMAGE_NAME = "calcwebappmvn:${BUILD_NUMBER}"
-         my_aws_access = credentials('my-aws-cred')
+         //my_aws_access = credentials('my-aws-cred')
     }
-    tools {
-        maven 'my-mvn'
-    }
+   // tools {
+     //   maven 'my-mvn'
+    //}
 
     stages {
 
@@ -20,13 +20,13 @@ pipeline {
             }
         }
 
-        stage('SonarQube analysis') {
+        /*stage('SonarQube analysis') {
             steps {
                 withSonarQubeEnv('sonar') {
                     sh 'mvn clean verify sonar:sonar'
                 }
             }
-        }
+        }*/
 
         // stage('Quality Gate') {
         //     steps {
@@ -126,3 +126,4 @@ pipeline {
         }
     }
 }
+
