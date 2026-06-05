@@ -8,9 +8,9 @@ pipeline {
         //IMAGE_NAME = "calcwebappmvn:${BUILD_NUMBER}"
         // my_aws_access = credentials('my-aws-cred')
     }
-  // tools {
-    //   maven 'my-mvn'
-    //}
+   tools {
+       maven 'my-mvn'
+    }
 
     stages {
 
