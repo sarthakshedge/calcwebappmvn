@@ -3,6 +3,8 @@ pipeline {
         label 'ag-1'
     }
     environment {
+        cluster_name = "my-cluster-1"
+        Region = "us-east-1"
         IMAGE_NAME = "calcwebappmvn:${BUILD_NUMBER}"
          my_aws_access = credentials('my-aws-cred')
     }
