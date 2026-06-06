@@ -58,7 +58,7 @@ pipeline {
                  sh 'ls -la'
              }
          }
-        /* stage('docker image build') {
+         stage('docker image build') {
              steps {
                  sh 'which docker'
                  sh 'docker --version'
@@ -73,7 +73,7 @@ pipeline {
              }
          }
 
-         stage('ECRLogin') {
+        /* stage('ECRLogin') {
              steps {
                  sh 'aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 964742912902.dkr.ecr.us-west-2.amazonaws.com'
                  echo "Logged in to AWS ECR Successfully!!"
