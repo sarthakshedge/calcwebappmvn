@@ -64,9 +64,9 @@ pipeline {
                  sh 'docker --version'
                  sh 'docker ps'
                  sh 'docker images'
-                 //sh 'docker rmi -f ${docker images -q}'
-                 //docker system prune -a
-                 // sh 'docker build -t calcwebappmvn:v1 .' 
+                 sh 'docker rmi -f ${docker images -q}'
+                 docker system prune -a
+                  sh 'docker build -t calcwebappmvn:v1 .' 
                  sh 'docker build -t ${IMAGE_NAME} .'
                  echo "Docker Image Built Successfully!!"
                  sh 'docker images'
